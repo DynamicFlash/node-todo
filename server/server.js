@@ -16,7 +16,7 @@ app.post('/todos',(req,res)=>{
 	})
 
 	newtodo.save().then((doc)=>{
-		res.send(JSON.stringify(doc, undefined, 2))
+		res.send(doc)
 	},(err)=>{
 		res.status(400).send(err);
 	})
